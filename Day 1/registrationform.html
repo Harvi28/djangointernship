@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" type="text/css" href="registrationform.css" media="screen">
+        <script type=text/javascript>
+            function validate()
+              {
+                  var user = document.getElementById("name");
+                 
+                  var ema = document.getElementById("email");
+                  var pass = document.getElementById("password");
+                 
+                  var add = document.getElementById("address"); 
+                  if(user.value=="")
+                  {
+                      alert("Enter name");
+                      return false;
+                  }
+                  
+                  else if(ema.value=="")
+                  {
+                      alert("enter email id");
+                      return false;
+                  }
+                  else if(pass.value=="")
+                  {
+                      alert("Enter password");
+                      return false;
+                  }
+                  else if(add.value=="")
+                  {
+                      alert("Enter Address");
+                      return false;
+                  }
+                  
+                  
+                  else
+                  {
+                      return true;
+                  }
+                 
+              }
+              
+    
+    
+            </script>
+    </head>
+    <body>
+        <h1 align="center" style=color:black><b>Registration form</b></h1>
+        <form id="f1" name="f1" onsubmit="return validate()" action="Home.html">
+        <table align="center" cellspacing=15 style=background-color:black;color:white>
+            <tr>
+                <td><label>Name</label></td>
+                <td><input type="text" id="name" name="name" placeholder="name" size="40px">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Email ID</label></td>
+                <td><input type="text" id="email" name="email" placeholder="Email ID" size="40px">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Password</label></td>
+                <td><input type="password" id="password" name="password" placeholder="Password" size="40px">
+                </td>
+            </tr>
+            <tr>
+                <td><lable>Address</lable></td>
+                <td><textarea rows="5" cols="38" id="add"></textarea></td>
+            </tr>
+            <tr>
+                <td><label>Gender</label></td>
+               <td><input type="radio" name="gender" value="male" checked>Male
+                <input type="radio" name="gender" value="female">Female
+                <input type="radio" name="gender" value="other">Other
+                </td>
+            </tr>
+           
+            
+            <tr>
+                <td align="center"><button ="submit" id="btn">Submit</button>
+                </td>
+                <td align="center"><button ="reset" id="btn">Reset</button>
+                </td>
+            </tr>
+         </table>
+        </form>   
+    </body>
+</html>
